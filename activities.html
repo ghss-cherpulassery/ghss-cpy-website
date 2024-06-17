@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GHSS CHERPULASSERY - Club Events</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/activities.css">
+  <!-- Additional CSS files -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+<main>
+  <div class="bradcam_area events_bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="bradcam_text">
+            <h3>Recent Events</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dynamic Club Sections will be inserted here -->
+  <div id="club-sections" class="container p-4"></div>
+</main>
+<div id="footer-placeholder"></div>
+
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Additional Scripts -->
+
+<script>
+$(function() {
+    $("#header-placeholder").load("header.html");
+    // $("#footer-placeholder").load("footer.html");
+
+    $.getJSON("activities.json", function(data) {
+        const clubSections = $("#club-sections");
+        $.each(data, function(clubName, events) {
+            let sectionHtml = `
+            <div class='club-container'>
+                <div class='row'>
+                    <div class='col-lg-12'>
+                        <div class='section_title text-center my-4'>
+                            <h3>${clubName} Programs</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-center flex-wrap'>`;
+
+            events.forEach(event => {
+                sectionHtml += `
+                <div class="animate__animated animate bounce activity-card  m-2 col-12 col-sm-4" >
+                  <div class="container mt-3">
+                    <img src="${event.image}" width="430" alt="${event.name}">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">${event.name}</h5>
+                    <p class="card-text">${event.description}</p>
+                    <p class="card-text text-primary">Date: ${event.date}</p>
+                  </div>
+                </div>`;
+            });
+
+            sectionHtml += '</div></div>';
+            clubSections.append(sectionHtml);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
