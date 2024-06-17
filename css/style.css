@@ -3368,7 +3368,7 @@ h3 {
 /* line 8, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_course.scss */
 .latest_coures_area::before {
   position: absolute;
-  background-image: url(../img/causes/1.png);
+  background-image: url(../img/causes/bkd.jpg);
   left: 0;
   content: '';
   width: 60%;
@@ -3444,7 +3444,7 @@ h3 {
   content: '';
   background-size: cover;
   background-position: center center;
-  background-image: url(../img/causes/2.png);
+  background-image: url(../img/causes/plant.jpg);
 }
 
 @media (max-width: 767px) {
@@ -3551,7 +3551,7 @@ h3 {
 /* line 137, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_course.scss */
 .admission_area::before {
   position: absolute;
-  background-image: url(../img/admission/1.png);
+  background-image: url(../img/admission/interaction.jpg);
   right: 0;
   content: '';
   width: 60%;
@@ -3613,7 +3613,7 @@ h3 {
   content: '';
   background-size: cover;
   background-position: center center;
-  background-image: url(../img/admission/2.png);
+  background-image: url(../img/contact/ghandiji.jpg)
 }
 
 @media (max-width: 767px) {
