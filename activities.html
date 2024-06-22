@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GHSS CHERPULASSERY - Club Events</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/activities.css">
+  <!-- Additional CSS files -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+<main>
+  <div class="bradcam_area events_bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="bradcam_text">
+            <h3>Recent Events</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dynamic Club Sections will be inserted here -->
+  <div id="club-sections" class="container p-4"></div>
+</main>
+<!-- footer start -->
+<footer class="footer">
+  <div class="footer_top">
+    <div class="container">
+      <div class="newsLetter_wrap">
+        <div class="row justify-content-between">
+          <div class="col-md-7">
+            <div class="footer_widget">
+              <h3 class="footer_title">
+                Stay Updated
+              </h3>
+              <form action="#" class="newsletter_form">
+                <input type="text" placeholder="Email Address">
+                <button type="submit">Subscribe Now</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-5">
+            <div class="footer_widget">
+              <h3 class="footer_title">
+                Stay Updated
+              </h3>
+              <div class="socail_links">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="ti-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-md-6 col-lg-3">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              About Us
+            </h3>
+            <ul>
+              <li><a href="#">Online Learning</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press Center</a></li>
+              <li><a href="#">Become an Instructor</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-lg-3">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Campus
+            </h3>
+            <ul>
+              <li><a href="#">Our Plans</a></li>
+              <li><a href="#">Free Trial</a></li>
+              <li><a href="#">Academic Solutions</a></li>
+              <li><a href="#">Business Solutions</a></li>
+              <li><a href="#">Government Solutions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-lg-3">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Study
+            </h3>
+            <ul>
+              <li><a href="#">Admissions Policy</a></li>
+              <li><a href="#">Getting Started</a></li>
+              <li><a href="#">Visa Information</a></li>
+              <li><a href="#">Tuition Calculator</a></li>
+              <li><a href="#">Request Information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-lg-3">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Support
+            </h3>
+            <ul>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">System Requirements</a></li>
+              <li><a href="#">Register Activation Key</a></li>
+              <li><a href="#">Site feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copy-right_text">
+    <div class="container">
+      <div class="footer_border"></div>
+      <div class="row">
+        <div class="col-xl-12">
+          <p class="copy_right text-center">
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+            All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a
+              href="https://colorlib.com" target="_blank">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Additional Scripts -->
+
+<script>
+$(function() {
+    $("#header-placeholder").load("header.html");
+    // $("#footer-placeholder").load("footer.html");
+
+    $.getJSON("activities.json", function(data) {
+        const clubSections = $("#club-sections");
+        $.each(data, function(clubName, events) {
+            let sectionHtml = `
+            <div class='club-container'>
+                <div class='row'>
+                    <div class='col-lg-12'>
+                        <div class='section_title text-center my-4'>
+                            <h3>${clubName} Programs</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-center flex-wrap'>`;
+
+            events.forEach(event => {
+                sectionHtml += `
+                <div class="animate__animated animate bounce activity-card  m-2 col-12 col-sm-4" >
+                  <div class="container mt-3">
+                    <img src="${event.image}" width="430" alt="${event.name}">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">${event.name}</h5>
+                    <p class="card-text">${event.description}</p>
+                    <p class="card-text text-primary">Date: ${event.date}</p>
+                  </div>
+                </div>`;
+            });
+
+            sectionHtml += '</div></div>';
+            clubSections.append(sectionHtml);
+        });
+    });
+});
+</script>
+
+</body>
+</html>

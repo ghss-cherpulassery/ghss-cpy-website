@@ -1,0 +1,81 @@
+{
+    "NSS": [
+        {
+            "date": "2024-06-20",
+            "name": "Community Clean-up",
+            "description": "Join us for a community clean-up event to help keep our neighborhood beautiful.",
+            "image": "img/banner/banner.png",
+            "club": "NSS"
+        },
+        {
+            "date": "2024-06-20",
+            "name": "Community Clean-up",
+            "description": "Join us for a community clean-up event to help keep our neighborhood beautiful.",
+            "image": "img/banner/banner.png",
+            "club": "NSS"
+        },{
+            "date": "2024-06-20",
+            "name": "Community Clean-up",
+            "description": "Join us for a community clean-up event to help keep our neighborhood beautiful.",
+            "image": "img/banner/banner.png",
+            "club": "NSS"
+        },
+        {
+            "date": "2024-06-20",
+            "name": "Community Clean-up",
+            "description": "Join us for a community clean-up event to help keep our neighborhood beautiful.",
+            "image": "img/banner/banner.png",
+            "club": "NSS"
+        },{
+            "date": "2024-06-20",
+            "name": "Community Clean-up",
+            "description": "Join us for a community clean-up event to help keep our neighborhood beautiful.",
+            "image": "img/banner/banner.png",
+            "club": "NSS"
+        },
+        {
+            "date": "2024-06-20",
+            "name": "Community Clean-up",
+            "description": "Join us for a community clean-up event to help keep our neighborhood beautiful.",
+            "image": "img/banner/banner.png",
+            "club": "NSS"
+        }
+
+    ],
+    "SPC": [
+        {
+            "date": "2024-07-05",
+            "name": "Leadership Workshop",
+            "description": "A workshop dedicated to enhancing leadership skills among students.",
+            "image": "img/banner/banner2.png",
+            "club": "SPC"
+        }
+    ],
+    "NCC": [
+        {
+            "date": "2024-08-15",
+            "name": "Independence Day Parade",
+            "description": "Participate in the grand Independence Day parade with the NCC group.",
+            "image": "img/event/1.png",
+            "club": "NCC"
+        }
+    ],
+    "Arts": [
+        {
+            "date": "2024-09-01",
+            "name": "Art Exhibition",
+            "description": "Displaying creative works from our talented student artists.",
+            "image": "img/event/2.png",
+            "club": "Arts"
+        }
+    ],
+    "Sports": [
+        {
+            "date": "2024-10-10",
+            "name": "Inter-school Basketball Tournament",
+            "description": "Compete in the thrilling annual inter-school basketball tournament.",
+            "image": "img/program/1.png",
+            "club": "Sports"
+        }
+    ]
+}
