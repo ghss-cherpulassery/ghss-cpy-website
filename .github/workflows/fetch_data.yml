@@ -22,7 +22,7 @@ jobs:
     - name: Fetch Google Sheets Data
       run: |
          BASE_URL="${{ secrets.GOOGLE_SHEET_WEB_APP_URL }}"
-         curl -L -s -o data/res.json "${BASE_URL}"
+         curl -L -s -o data/activities.json "${BASE_URL}"
   
     - name: Commit and push changes
       run: |
