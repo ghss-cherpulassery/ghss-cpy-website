@@ -1,12 +1,36 @@
 [
   {
-    "name": "test",
-    "image": "img/banner/banner.png"
+    "name": "Gandhi statue",
+    "image": "ghandiji.jpg"
   }, {
-    "name": "test",
-    "image": "img/banner/banner.png"
+    "name": "Pictures ",
+    "image": "photos hs.jpg"
   }, {
-    "name": "test",
-    "image": "img/banner/banner.png"
+    "name": "Higher secondary farewell 2024",
+    "image": "Cpy farewell.jpg"
+  },
+  {
+    "name": "Higher secondary farewell 2024",
+    "image": "HSE farewell.jpg"
+  },
+  {
+    "name": "Onam festival (CS2B batch)",
+    "image": "Onam festival.jpg"
+  },
+  {
+    "name": "school ",
+    "image":"school pic.jpg"
+
+  },
+
+  {
+    "name":"School bus",
+    "image": "school bus.jpg"
+
+  },
+  {
+    "name": "beautiful views",
+    "image": "beauty.jpg"
   }
+
 ]
